@@ -53,6 +53,7 @@ internal class Program
         }
         Console.WriteLine("Ket qua la: " + ketqua);
         */
+        /*
         Console.WriteLine("Nhap nam sinh cua nam:");
         uint a= uint.Parse(Console.ReadLine());
         Console.WriteLine("Nhap nam sinh cua nu:");
@@ -166,5 +167,24 @@ internal class Program
             else
                 Console.WriteLine("Hai nguoi khong ky tuoi nhau");
         }
+        */
+        Console.Write("Nhap 4 so: ");
+        double so1 = double.Parse(Console.ReadLine());
+        double so2 = double.Parse(Console.ReadLine());
+        double so3 = double.Parse(Console.ReadLine());
+        double so4 = double.Parse(Console.ReadLine());
+        double total = so1 + so2 + so3 + so4;
+        double tich = so1 * so2 * so3 * so4;
+        double max = Math.Max(Math.Max(so1, so2), Math.Max(so3, so4));
+        double min = Math.Min(Math.Min(so1, so2), Math.Min(so3, so4));
+        double s1 = total - max - min;
+        double s2 = tich / (max * min);
+        double delta = Math.Pow(s1, 2) - 4 * s2;
+        double x = (s1 + Math.Sqrt(delta) ) / 2;;
+        double y = (s1 - Math.Sqrt(delta)) / 2;
+        double mmax = Math.Max(x, y);
+        double mmin = Math.Min(x, y);
+
+        Console.WriteLine($"Sorted:  {max}, {mmax}, {mmin},  {min}");
     }
 }
