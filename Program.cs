@@ -168,6 +168,7 @@ internal class Program
                 Console.WriteLine("Hai nguoi khong ky tuoi nhau");
         }
         */
+        /*
         Console.Write("Nhap 4 so: ");
         double so1 = double.Parse(Console.ReadLine());
         double so2 = double.Parse(Console.ReadLine());
@@ -180,11 +181,26 @@ internal class Program
         double s1 = total - max - min;
         double s2 = tich / (max * min);
         double delta = Math.Pow(s1, 2) - 4 * s2;
-        double x = (s1 + Math.Sqrt(delta) ) / 2;;
+        double x = (s1 + Math.Sqrt(delta) ) / 2;
         double y = (s1 - Math.Sqrt(delta)) / 2;
         double mmax = Math.Max(x, y);
         double mmin = Math.Min(x, y);
 
         Console.WriteLine($"Sorted:  {max}, {mmax}, {mmin},  {min}");
+        */
+        Console.Write("Nhap vao so nguyen thu nhat: ");
+        int so1 = int.Parse(Console.ReadLine());
+        Console.Write("Nhap vao so nguyen thu hai: ");
+        int so2 = int.Parse(Console.ReadLine());
+        int tempa = so1;
+        int tempb = so2;
+        while (tempa != 0)
+        {
+            int r = tempa % tempb;
+            tempa = tempb;
+            tempb = r;
+        }
+        int ucln = (so1 * so2) / tempa;
+        Console.Write("BCNN la {0}, UCLN la {1}", tempa, ucln);
     }
 }
